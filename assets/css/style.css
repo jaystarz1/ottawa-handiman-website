@@ -1190,24 +1190,23 @@ html {
     border-top: 1px solid rgba(255,255,255,0.1);
     margin-top: 20px;
     font-size: 14px;
-    opacity: 0.8;
-    background: var(--primary-color);
-    color: rgba(255,255,255,0.8);
+    background: var(--text-dark);
+    color: rgba(255,255,255,0.7);
 }
 
 .footer-credit p {
     margin: 0;
+    text-align: center;
 }
 
 .footer-credit a {
-    color: var(--accent-color);
+    color: rgba(255,255,255,0.8);
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 .footer-credit a:hover {
-    color: #FFD700;
+    color: var(--white);
     text-decoration: underline;
-    opacity: 1;
 }
