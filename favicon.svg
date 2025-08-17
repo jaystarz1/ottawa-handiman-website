@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background circle with wood brown color -->
+  <circle cx="16" cy="16" r="15" fill="#8B4513" stroke="#654321" stroke-width="1"/>
+  
+  <!-- Letter H in cream/off-white color for contrast -->
+  <path d="M 9 8 L 9 24 L 12 24 L 12 18 L 20 18 L 20 24 L 23 24 L 23 8 L 20 8 L 20 15 L 12 15 L 12 8 Z" 
+        fill="#FFF8DC" />
+  
+  <!-- Subtle inner shadow for depth -->
+  <path d="M 9 8 L 9 24 L 12 24 L 12 18 L 20 18 L 20 24 L 23 24 L 23 8 L 20 8 L 20 15 L 12 15 L 12 8 Z" 
+        fill="none" 
+        stroke="#8B4513" 
+        stroke-width="0.5" 
+        opacity="0.3"/>
+</svg>
