@@ -1,13 +1,15 @@
 // Ottawa Handiman Service Worker
 // Version 1.0.0
 
-const CACHE_NAME = 'ottawa-handiman-v1';
+const CACHE_NAME = 'ottawa-handiman-v2';
 const urlsToCache = [
   '/',
   '/assets/css/style.css',
   '/assets/js/script.js',
+  '/assets/images/workshop-hero.webp',
   '/assets/images/workshop-hero.jpg',
-  '/favicon.svg'
+  '/favicon.svg',
+  '/manifest.json'
 ];
 
 // Install event - cache resources
