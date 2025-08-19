@@ -90,6 +90,16 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
             
+            // Track form submission with Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'form_submit', {
+                    'event_category': 'engagement',
+                    'event_label': 'contact_form',
+                    'service_type': data.service,
+                    'value': 1
+                });
+            }
+            
             // Create email content
             const emailBody = `
 New Project Inquiry from Ottawa Handiman Website:
@@ -159,12 +169,14 @@ Sent from ottawahandiman.ca contact form
     const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
     phoneLinks.forEach(link => {
         link.addEventListener('click', function() {
-            // Track phone clicks
+            // Track phone clicks with Google Analytics
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'phone_click', {
-                    'event_category': 'engagement',
-                    'event_label': 'phone_number_clicked'
+                gtag('event', 'click', {
+                    'event_category': 'contact',
+                    'event_label': 'phone_call',
+                    'value': 1
                 });
+                console.log('Phone click tracked');
             }
         });
     });
@@ -173,12 +185,14 @@ Sent from ottawahandiman.ca contact form
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
     emailLinks.forEach(link => {
         link.addEventListener('click', function() {
-            // Track email clicks
+            // Track email clicks with Google Analytics
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'email_click', {
-                    'event_category': 'engagement',
-                    'event_label': 'email_clicked'
+                gtag('event', 'click', {
+                    'event_category': 'contact',
+                    'event_label': 'email',
+                    'value': 1
                 });
+                console.log('Email click tracked');
             }
         });
     });
@@ -308,12 +322,24 @@ Sent from ottawahandiman.ca contact form
                 // Log load time (for debugging)
                 console.log(`Page load time: ${loadTime}ms`);
                 
-                // Track with analytics if available
+                // Track with Google Analytics
                 if (typeof gtag !== 'undefined') {
-                    gtag('event', 'page_load_time', {
+                    gtag('event', 'timing_complete', {
                         'event_category': 'performance',
-                        'value': loadTime
+                        'name': 'page_load',
+                        'value': loadTime,
+                        'event_label': loadTime < 3000 ? 'fast' : loadTime < 5000 ? 'average' : 'slow'
                     });
+                    
+                    // Track Core Web Vitals
+                    if (perfData.domContentLoadedEventEnd) {
+                        const dcl = perfData.domContentLoadedEventEnd - perfData.navigationStart;
+                        gtag('event', 'timing_complete', {
+                            'event_category': 'performance',
+                            'name': 'dom_content_loaded',
+                            'value': dcl
+                        });
+                    }
                 }
             }, 0);
         });
@@ -429,20 +455,91 @@ Sent from ottawahandiman.ca contact form
         });
     });
 
-    console.log('Ottawa Handiman website loaded successfully!');
+    // Track scroll depth for analytics
+    let scrollDepths = [25, 50, 75, 90];
+    let scrolledDepths = [];
+    
+    window.addEventListener('scroll', function() {
+        let scrollPercent = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+        
+        scrollDepths.forEach(depth => {
+            if (scrollPercent >= depth && !scrolledDepths.includes(depth)) {
+                scrolledDepths.push(depth);
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'scroll', {
+                        'event_category': 'engagement',
+                        'event_label': `${depth}%`,
+                        'value': depth
+                    });
+                    console.log(`Scroll depth ${depth}% tracked`);
+                }
+            }
+        });
+    });
+    
+    // Track outbound links
+    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="ottawahandiman.ca"])');
+    externalLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const url = this.href;
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {
+                    'event_category': 'outbound',
+                    'event_label': url,
+                    'transport_type': 'beacon'
+                });
+            }
+        });
+    });
+    
+    // Track navigation menu clicks
+    const navLinks = document.querySelectorAll('.nav-menu a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const section = this.getAttribute('href').replace('#', '');
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'navigation', {
+                    'event_category': 'engagement',
+                    'event_label': section
+                });
+            }
+        });
+    });
+    
+    // Track CTA button clicks
+    const ctaButtons = document.querySelectorAll('.cta-button');
+    ctaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const buttonText = this.textContent;
+            const isPrimary = this.classList.contains('primary');
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'cta_click', {
+                    'event_category': 'engagement',
+                    'event_label': buttonText,
+                    'button_type': isPrimary ? 'primary' : 'secondary'
+                });
+            }
+        });
+    });
+    
+    console.log('Ottawa Handiman website loaded successfully with Google Analytics!');
 });
 
-// Utility function to track custom events (for future analytics integration)
-function trackEvent(action, category = 'engagement', label = '') {
+// Enhanced utility function to track custom events with Google Analytics
+function trackEvent(action, category = 'engagement', label = '', value = null) {
     if (typeof gtag !== 'undefined') {
-        gtag('event', action, {
+        const eventParams = {
             'event_category': category,
             'event_label': label
-        });
+        };
+        
+        if (value !== null) {
+            eventParams.value = value;
+        }
+        
+        gtag('event', action, eventParams);
+        console.log(`GA Event: ${action} - ${category} - ${label}${value ? ' - ' + value : ''}`);
     }
-    
-    // Also log to console for debugging
-    console.log(`Event tracked: ${action} - ${category} - ${label}`);
 }
 
 // Service Worker registration (for future PWA capabilities)
