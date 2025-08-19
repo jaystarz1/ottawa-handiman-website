@@ -3,6 +3,56 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if (navToggle) {
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            
+            // Update aria-expanded
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+    
+    // Sticky navigation on scroll
+    const navigation = document.querySelector('.navigation');
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll <= 0) {
+            navigation.classList.remove('scroll-up');
+            return;
+        }
+        
+        if (currentScroll > lastScroll && !navigation.classList.contains('scroll-down')) {
+            // Scrolling down
+            navigation.classList.remove('scroll-up');
+            navigation.classList.add('scroll-down');
+        } else if (currentScroll < lastScroll && navigation.classList.contains('scroll-down')) {
+            // Scrolling up
+            navigation.classList.remove('scroll-down');
+            navigation.classList.add('scroll-up');
+        }
+        
+        lastScroll = currentScroll;
+    });
+    
     // Smooth scrolling for navigation links
     const links = document.querySelectorAll('a[href^="#"]');
     links.forEach(link => {

@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Homepage with images -->
   <url>
     <loc>https://ottawahandiman.ca/</loc>
     <lastmod>2025-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-  
-  <!-- Main sections (anchors on single page) -->
-  <url>
-    <loc>https://ottawahandiman.ca/#services</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://ottawahandiman.ca/#about</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://ottawahandiman.ca/#gallery</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://ottawahandiman.ca/#testimonials</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://ottawahandiman.ca/#contact</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://ottawahandiman.ca/#faq</loc>
-    <lastmod>2025-01-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/workshop-hero.jpg</image:loc>
+      <image:title>Ottawa Handiman Professional Woodworking Workshop</image:title>
+      <image:caption>Professional woodworking workshop in Barrhaven Ottawa for custom wood cutting and small carpentry projects</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/custom-post-craftsmanship.jpg</image:loc>
+      <image:title>Custom Wood Post Craftsmanship Ottawa</image:title>
+      <image:caption>Precision cut custom stair railing posts by Ottawa Handiman woodworking expert</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/fence-posts-custom-woodwork.jpg</image:loc>
+      <image:title>Professional Fence Posts Custom Woodwork</image:title>
+      <image:caption>Custom fence posts showcasing precision woodworking in Ottawa area</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/professional-handrail-posts-ottawa.jpg</image:loc>
+      <image:title>Professional Handrail Posts Ottawa</image:title>
+      <image:caption>The Wood Source recommended handiman custom handrail posts and precision carpentry</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/wood-restoration-before-after.jpg</image:loc>
+      <image:title>Wood Restoration Before After Ottawa</image:title>
+      <image:caption>Professional wood restoration and repair services in Ottawa showing before and after results</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/precision-woodworking-tools.jpg</image:loc>
+      <image:title>Professional Woodworking Tools Ottawa</image:title>
+      <image:caption>Commercial grade precision woodworking tools for accurate cuts and professional results</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/woodworking-project-assembly.jpg</image:loc>
+      <image:title>Woodworking Project Assembly Ottawa</image:title>
+      <image:caption>Small carpentry project assembly using professional clamps and techniques in Barrhaven workshop</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/craftsman-at-work-ottawa.jpg</image:loc>
+      <image:title>Ottawa Craftsman Woodworker Expert</image:title>
+      <image:caption>30+ years experience woodworking expert in Barrhaven workshop custom carpentry</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/custom-trim-carpentry-ottawa.jpg</image:loc>
+      <image:title>Custom Trim Carpentry Ottawa</image:title>
+      <image:caption>Precision custom trim and finish carpentry work for Ottawa area homeowners</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ottawahandiman.ca/assets/images/workshop-lumber-storage.jpg</image:loc>
+      <image:title>Professional Lumber Storage Workshop</image:title>
+      <image:caption>Ottawa Handiman workshop lumber storage partnering with The Wood Source Manotick</image:caption>
+    </image:image>
   </url>
 </urlset>
