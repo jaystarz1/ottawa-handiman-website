@@ -542,6 +542,117 @@ function trackEvent(action, category = 'engagement', label = '', value = null) {
     }
 }
 
+// Share button functionality
+document.getElementById('share').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const menu = document.getElementById('share-menu-inline');
+
+    // Toggle menu
+    if (menu.style.display === 'none' || !menu.style.display) {
+        menu.style.display = 'block';
+        // Track share button click
+        if (typeof trackEvent === 'function') {
+            trackEvent('share_button_clicked', 'engagement', 'Share Button');
+        }
+    } else {
+        menu.style.display = 'none';
+    }
+});
+
+// Share functions
+window.shareToFacebook = function() {
+    const url = window.location.href;
+    const title = "Ottawa Handiman - Professional Woodworking Services";
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`, '_blank');
+    document.getElementById('share-menu-inline').style.display = 'none';
+    if (typeof trackEvent === 'function') {
+        trackEvent('share_facebook', 'engagement', 'Share to Facebook');
+    }
+};
+
+window.shareToLinkedIn = function() {
+    const url = window.location.href;
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+    document.getElementById('share-menu-inline').style.display = 'none';
+    if (typeof trackEvent === 'function') {
+        trackEvent('share_linkedin', 'engagement', 'Share to LinkedIn');
+    }
+};
+
+window.shareToNextdoor = function() {
+    const url = window.location.href;
+    const title = "Ottawa Handiman - Professional Woodworking Services in Barrhaven";
+    const text = "Check out Ottawa Handiman for custom wood cutting and small carpentry projects. Trusted by The Wood Source!";
+    // Nextdoor doesn't have a direct share URL, so we'll use their general sharing approach
+    window.open(`https://nextdoor.com/`, '_blank');
+    // Copy the link to clipboard for easy pasting
+    navigator.clipboard.writeText(`${title} - ${text} ${url}`).then(() => {
+        alert('Link and description copied! Please paste in your Nextdoor post.');
+    });
+    document.getElementById('share-menu-inline').style.display = 'none';
+    if (typeof trackEvent === 'function') {
+        trackEvent('share_nextdoor', 'engagement', 'Share to Nextdoor');
+    }
+};
+
+window.shareToEmail = function() {
+    const subject = "Ottawa Handiman - Professional Woodworking Services";
+    const url = window.location.href;
+    const body = `I found this great woodworking service in Ottawa that handles small jobs and custom wood cutting. They're trusted by The Wood Source and have over 30 years of experience.\n\nCheck them out: ${url}`;
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    document.getElementById('share-menu-inline').style.display = 'none';
+    if (typeof trackEvent === 'function') {
+        trackEvent('share_email', 'engagement', 'Share via Email');
+    }
+};
+
+window.shareCopyLink = function() {
+    const url = window.location.href;
+    navigator.clipboard.writeText(url).then(() => {
+        // Change button text temporarily to show success
+        const copyOption = event.target.closest('.share-option');
+        const originalHTML = copyOption.innerHTML;
+        copyOption.innerHTML = '<span style="font-size: 18px;">✅</span> Copied!';
+        copyOption.style.background = '#e8f5e9';
+        
+        setTimeout(() => {
+            copyOption.innerHTML = originalHTML;
+            copyOption.style.background = '';
+        }, 2000);
+    }).catch(() => {
+        alert('Link copied: ' + url);
+    });
+    document.getElementById('share-menu-inline').style.display = 'none';
+    if (typeof trackEvent === 'function') {
+        trackEvent('copy_link', 'engagement', 'Copy Link');
+    }
+};
+
+window.sharePrint = function() {
+    window.print();
+    document.getElementById('share-menu-inline').style.display = 'none';
+    if (typeof trackEvent === 'function') {
+        trackEvent('print_page', 'engagement', 'Print Page');
+    }
+};
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('#share') && !e.target.closest('#share-menu-inline')) {
+        document.getElementById('share-menu-inline').style.display = 'none';
+    }
+});
+
+// Add hover effect to share options
+document.querySelectorAll('.share-option').forEach(option => {
+    option.addEventListener('mouseenter', function() {
+        this.style.background = '#f5f5f5';
+    });
+    option.addEventListener('mouseleave', function() {
+        this.style.background = '';
+    });
+});
+
 // Service Worker registration (for future PWA capabilities)
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
