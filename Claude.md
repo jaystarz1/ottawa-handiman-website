@@ -1,5 +1,18 @@
 # Ottawa Handiman Website - Claude Development Guide
 
+## 🎨 STYLE GUIDE REFERENCE - MANDATORY READING
+**CRITICAL**: Before creating ANY new pages or making design changes, you MUST consult the **[STYLE-GUIDE.md](./STYLE-GUIDE.md)** file. This comprehensive style guide contains:
+- Complete color palette and usage guidelines
+- Typography specifications
+- Component library (cards, buttons, forms, etc.)
+- Grid system and responsive breakpoints
+- Navigation and footer patterns
+- Interactive elements (share button, lightbox, etc.)
+- Accessibility standards
+- SEO requirements for every page
+
+**The STYLE-GUIDE.md is the single source of truth for all design decisions. DO NOT deviate from it.**
+
 ## 🎯 PROJECT MISSION: SEO DOMINATION - COMPLETE ✅
 This is not just a website - this is an SEO WEAPON that absolutely crushes local Ottawa woodworking/handyman searches while appearing natural and trustworthy. **MISSION ACCOMPLISHED.**
 
@@ -24,13 +37,58 @@ This is not just a website - this is an SEO WEAPON that absolutely crushes local
 
 **Value Proposition**: Professional results without tool investment - "Small jobs that require big tools"
 
-## 🗂️ FINAL FILE STRUCTURE
+## 🏗️ MULTI-PAGE ARCHITECTURE
+The website now supports multiple pages with a component-based architecture for consistency:
+
+### Component Structure
+```
+components/
+├── nav-component.html      # Reusable navigation bar
+└── footer-component.html   # Reusable footer
+
+assets/
+├── css/
+│   ├── shared-styles.css  # Navigation, footer, common components
+│   ├── style.css          # Homepage specific styles
+│   └── [page-name].css    # Page-specific styles
+├── js/
+│   ├── shared-scripts.js  # Navigation, share button, common functionality
+│   ├── script.js          # Homepage specific scripts
+│   └── [page-name].js     # Page-specific scripts
+└── images/
+
+templates/
+└── page-template.html      # Boilerplate for new pages
+
+build.js                    # Component injection script
+```
+
+### Creating New Pages
+1. Copy `page-template.html` as starting point
+2. Follow STYLE-GUIDE.md for all design decisions
+3. Include shared-styles.css and shared-scripts.js
+4. Maintain navigation consistency with nav-component.html
+5. Run build.js to inject components
+
+## 🗂️ COMPLETE FILE STRUCTURE
 ```
 ottawa-handiman-website/
-├── index.html              # Complete SEO-optimized single page
+├── index.html              # Complete SEO-optimized homepage
+├── STYLE-GUIDE.md          # Comprehensive design system documentation
+├── components/             # Reusable HTML components
+│   ├── nav-component.html
+│   └── footer-component.html
+├── templates/              # Page templates
+│   └── page-template.html
 ├── assets/
-│   ├── css/style.css       # Mobile-first responsive design + accessibility
-│   ├── js/script.js        # Performance optimization + interaction
+│   ├── css/
+│   │   ├── shared-styles.css  # Common styles across all pages
+│   │   ├── style.css          # Homepage specific styles
+│   │   └── [page].css         # Additional page-specific styles
+│   ├── js/
+│   │   ├── shared-scripts.js  # Common JavaScript
+│   │   ├── script.js          # Homepage specific scripts
+│   │   └── [page].js          # Additional page-specific scripts
 │   └── images/             # 10 real project photos (SEO-optimized names)
 │       ├── workshop-hero.jpg
 │       ├── custom-post-craftsmanship.jpg

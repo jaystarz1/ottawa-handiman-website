@@ -1,0 +1,617 @@
+/* Ottawa Handiman - Unusual Projects Page Styles */
+/* Don't Be Afraid to Ask - Unique Project Showcase */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.unusual-hero {
+    background: linear-gradient(135deg, #2C5530 0%, #3a6b42 100%);
+    color: var(--white);
+    padding: 100px 0 80px;
+    text-align: center;
+}
+
+.unusual-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.unusual-hero .hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.95);
+    margin-bottom: 0.5rem;
+}
+
+.unusual-hero .hero-description {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.hero-badges .badge {
+    background: rgba(255,255,255,0.2);
+    border: 2px solid rgba(255,255,255,0.3);
+    color: var(--white);
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+/* ============================================
+   INTRODUCTION SECTION
+   ============================================ */
+.intro-section {
+    padding: 80px 0;
+    text-align: center;
+    background: var(--white);
+}
+
+.intro-section h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+}
+
+/* ============================================
+   CASE STUDY SECTION
+   ============================================ */
+.case-study-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+/* Alternating background for second case study */
+.case-study-section.case-study-alt {
+    background: var(--white);
+    border-top: 1px solid var(--border-color);
+}
+
+.case-study-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.case-label {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.case-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+}
+
+/* Case Study Blocks */
+.case-block {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 3rem;
+    margin-bottom: 3rem;
+}
+
+.request-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.client-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--text-dark);
+    border-left: 4px solid var(--primary-color);
+    padding-left: 2rem;
+    margin: 2rem 0;
+    line-height: 1.8;
+}
+
+.attribution {
+    text-align: right;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.case-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Research Block */
+.research-block .fact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.fact-item {
+    padding: 1.5rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+}
+
+.fact-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.fact-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.culture-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.culture-list li {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.culture-list strong {
+    color: var(--primary-color);
+}
+
+.physics-note {
+    background: linear-gradient(135deg, #E8F5E8 0%, #F0F8F0 100%);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border: 1px solid rgba(44, 85, 48, 0.2);
+}
+
+.physics-note h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Process Block */
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.process-step {
+    display: flex;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.process-step h4 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* Result Block */
+.result-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.highlight {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--light-bg);
+    border-radius: 8px;
+}
+
+.highlight-icon {
+    color: var(--success-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ============================================
+   YOUR PROJECT SECTION
+   ============================================ */
+.your-project-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #E8F5E8 0%, #F0F8F0 100%);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.your-project-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.your-project-content > p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+}
+
+.project-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.example-item {
+    text-align: center;
+}
+
+.example-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.example-item p {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.highlight-text {
+    background: rgba(44, 85, 48, 0.1);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    font-style: italic;
+    color: var(--text-dark);
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+/* ============================================
+   PROJECTS GRID SECTION
+   ============================================ */
+.projects-grid-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.project-card.coming-soon {
+    opacity: 0.7;
+}
+
+.placeholder-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #E0E0E0 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   PHILOSOPHY SECTION
+   ============================================ */
+.philosophy-section {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.philosophy-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.philosophy-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.unusual-cta {
+    background: linear-gradient(135deg, #2C5530 0%, #3a6b42 100%);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.unusual-cta h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 2rem;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-content p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.unusual-cta .cta-button.secondary {
+    background: rgba(255,255,255,0.9);
+    color: var(--primary-color);
+    border: 2px solid var(--white);
+}
+
+.unusual-cta .cta-button.secondary:hover {
+    background: var(--white);
+}
+
+.cta-note {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-top: 2rem;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+    .unusual-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .unusual-hero .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .request-block {
+        grid-template-columns: 1fr;
+    }
+    
+    .fact-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .result-highlights {
+        grid-template-columns: 1fr;
+    }
+    
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .case-block {
+        padding: 2rem 1.5rem;
+    }
+    
+    .client-quote {
+        font-size: 1.1rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .unusual-hero {
+        padding: 80px 0 60px;
+    }
+    
+    .hero-badges {
+        gap: 0.5rem;
+    }
+    
+    .hero-badges .badge {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.8rem;
+    }
+    
+    .case-block {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .philosophy-item {
+        padding: 1.5rem;
+    }
+    
+    .philosophy-icon {
+        font-size: 2.5rem;
+    }
+    
+    .project-examples {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .example-icon {
+        font-size: 2rem;
+    }
+    
+    .your-project-section {
+        padding: 60px 0;
+    }
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.case-block {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.philosophy-item {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.philosophy-item:nth-child(1) { animation-delay: 0.1s; }
+.philosophy-item:nth-child(2) { animation-delay: 0.2s; }
+.philosophy-item:nth-child(3) { animation-delay: 0.3s; }
+.philosophy-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .unusual-hero {
+        background: white;
+        color: black;
+    }
+    
+    .unusual-hero h1,
+    .unusual-cta h2 {
+        color: black;
+    }
+    
+    .hero-badges,
+    .cta-buttons {
+        display: none;
+    }
+    
+    .case-block {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
