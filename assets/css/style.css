@@ -151,6 +151,12 @@ body {
     
     .nav-toggle {
         display: flex;
+        position: relative;
+        z-index: 1001;
+        -webkit-tap-highlight-color: transparent;
+        width: 40px;
+        height: 40px;
+        align-items: center;
     }
     
     .nav-menu {
