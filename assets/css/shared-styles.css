@@ -452,11 +452,11 @@ section {
 /* Mobile Navigation */
 @media (max-width: 768px) {
     body {
-        padding-top: 60px;
+        padding-top: 70px;
     }
     
     .nav-container {
-        height: 60px;
+        height: 70px;
     }
     
     .nav-toggle {
