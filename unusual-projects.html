@@ -102,10 +102,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Shared styles (required for all pages) -->
-    <link rel="stylesheet" href="assets/css/shared-styles.css?t=20250125-fix">
+    <link rel="stylesheet" href="assets/css/shared-styles.css?t=css-only">
     
     <!-- Page-specific styles -->
-    <link rel="stylesheet" href="assets/css/unusual-projects.css?t=20250125-fix">
+    <link rel="stylesheet" href="assets/css/unusual-projects.css?t=css-only">
 </head>
 <body>
     <!-- Skip to main content for accessibility -->
@@ -120,11 +120,12 @@
                     <span class="nav-tagline">Professional Woodworking</span>
                 </a>
             </div>
-            <button type="button" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <input type="checkbox" id="nav-check" class="nav-check">
+            <label for="nav-check" class="nav-toggle" aria-label="Toggle navigation menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </label>
             <ul class="nav-menu">
                 <li><a href="/" data-nav="home">Home</a></li>
                 <li><a href="/#services" data-nav="services">Services</a></li>
@@ -588,9 +589,9 @@
     
     <!-- Scripts -->
     <!-- Shared scripts (required for all pages) -->
-    <script src="assets/js/shared-scripts.js?t=20250125-fix"></script>
+    <script src="assets/js/shared-scripts.js?t=css-only"></script>
     
     <!-- Page-specific scripts -->
-    <script src="assets/js/unusual-projects.js?t=20250125-fix"></script>
+    <script src="assets/js/unusual-projects.js?t=css-only"></script>
 </body>
 </html>
