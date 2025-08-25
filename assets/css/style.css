@@ -152,7 +152,7 @@ body {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 60px;
+        top: 70px;
         flex-direction: column;
         background: var(--white);
         width: 100%;
@@ -161,6 +161,7 @@ body {
         box-shadow: 0 10px 27px rgba(0,0,0,0.1);
         padding: 20px 0;
         gap: 1rem;
+        z-index: 999;
     }
     
     .nav-menu.active {
