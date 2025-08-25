@@ -3,20 +3,49 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Mobile navigation toggle
+    // Mobile navigation toggle with iOS fix
     const navToggle = document.querySelector('.nav-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function(e) {
+        let isProcessing = false;
+        
+        // Handle both touch and click events properly
+        const toggleMenu = function(e) {
+            // Prevent double-firing
+            if (isProcessing) return;
+            isProcessing = true;
+            
             e.preventDefault();
             e.stopPropagation();
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            e.stopImmediatePropagation();
             
-            // Update aria-expanded
-            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-            navToggle.setAttribute('aria-expanded', !isExpanded);
+            // Toggle classes
+            const isActive = navMenu.classList.contains('active');
+            
+            if (isActive) {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                navMenu.classList.add('active');
+                navToggle.classList.add('active');
+                navToggle.setAttribute('aria-expanded', 'true');
+            }
+            
+            // Reset flag after animation
+            setTimeout(() => {
+                isProcessing = false;
+            }, 50);
+        };
+        
+        // Add both touch and click handlers for iOS compatibility
+        navToggle.addEventListener('touchstart', toggleMenu, { passive: false });
+        navToggle.addEventListener('click', function(e) {
+            // Only fire click if touch didn't already handle it
+            if (!isProcessing) {
+                toggleMenu(e);
+            }
         });
         
         // Close menu when clicking on a link
