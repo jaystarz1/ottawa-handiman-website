@@ -110,6 +110,81 @@
 <body>
     <!-- Skip to main content for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAVIGATION_START -->
+<nav class="navigation" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <a href="/" aria-label="Ottawa Handiman Home">
+                <strong>Ottawa Handiman</strong>
+                <span class="nav-tagline">Professional Woodworking</span>
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="/" data-nav="home">Home</a></li>
+            <li><a href="/#services" data-nav="services">Services</a></li>
+            <li><a href="/#about" data-nav="about">About</a></li>
+            <li><a href="/#gallery" data-nav="gallery">Gallery</a></li>
+            <li><a href="/#process" data-nav="process">Process</a></li>
+            <li><a href="/projects.html" data-nav="projects">Projects</a></li>
+            <li><a href="/#faq" data-nav="faq">FAQ</a></li>
+            <li><a href="/#contact" data-nav="contact">Contact</a></li>
+            <li class="nav-cta"><a href="tel:3439870900" class="nav-phone">343.987.0900</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Share Button Component -->
+<button class="share-button" id="share" aria-label="Share this page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+    </svg>
+    <span>Share</span>
+</button>
+
+<!-- Share Menu Popup -->
+<div id="share-menu-inline" style="
+    position: fixed;
+    background: white;
+    border: 2px solid #2d5f3f;
+    border-radius: 8px;
+    padding: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999999;
+    display: none;
+    min-width: 200px;
+    top: 80px;
+    right: 20px;
+">
+    <div class="share-option" onclick="shareToFacebook()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
+        <span style="font-size: 18px;">📘</span> Facebook
+    </div>
+    <div class="share-option" onclick="shareToLinkedIn()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
+        <span style="font-size: 18px;">🔗</span> LinkedIn
+    </div>
+    <div class="share-option" onclick="shareToNextdoor()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
+        <span style="font-size: 18px;">🏘️</span> Nextdoor
+    </div>
+    <div class="share-option" onclick="shareToEmail()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
+        <span style="font-size: 18px;">✉️</span> Email
+    </div>
+    <div class="share-option" onclick="shareCopyLink()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
+        <span style="font-size: 18px;">📋</span> Copy Link
+    </div>
+    <div class="share-option" onclick="sharePrint()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
+        <span style="font-size: 18px;">🖨️</span> Print
+    </div>
+</div>
+<!-- NAVIGATION_END -->
     
     <!-- Navigation Component -->
     <nav class="navigation" role="navigation" aria-label="Main navigation">
@@ -212,8 +287,132 @@
             </div>
         </section>
         
-        <!-- Featured Case Study: The Bullroarer Project -->
+        <!-- Featured Case Study: Outdoor Chairs -->
         <section class="case-study-section">
+            <div class="container">
+                <div class="case-study-header">
+                    <span class="case-label">Featured Project</span>
+                    <h2>Legacy Outdoor Chairs: When Love Means Rebuilding</h2>
+                    <p class="case-subtitle">Recreating 30-Year-Old Master Craftsmanship from Scratch</p>
+                </div>
+
+                <!-- The Request -->
+                <div class="case-block request-block">
+                    <div class="case-content">
+                        <h3>The Assessment</h3>
+                        <blockquote class="client-quote">
+                            "The client wanted me to assess and refurbish two of his outdoor chairs. When I looked them over, I found wood rot throughout, so advised him they couldn't be repaired. However, I offered to copy them and build them from new."
+                        </blockquote>
+                        <p>He thought about that – given the price of wood these days, I can't blame him – but after some consideration, he asked me to go ahead.</p>
+                    </div>
+                    <div class="case-image">
+                        <img src="assets/images/projects/outdoor-chair-original-weathered.jpg" alt="Original outdoor chairs showing 30 years of weathering - Ottawa Handiman restoration project" loading="lazy">
+                        <p class="image-caption">The original chairs after 30 years of faithful service</p>
+                    </div>
+                </div>
+
+                <!-- The Discovery -->
+                <div class="case-block research-block">
+                    <div class="case-content">
+                        <h3>Discovering Master Craftsmanship</h3>
+                        <p>When I took them apart, I could tell they'd been built by a master carpenter – the angles of the cuts were impressive and the construction solid. It was no wonder those chairs lasted 30 years. However, time takes its toll.</p>
+
+                        <div class="fact-grid">
+                            <div class="fact-item">
+                                <span class="fact-number">30</span>
+                                <span class="fact-label">Years of Service</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-number">2</span>
+                                <span class="fact-label">Chairs Rebuilt</span>
+                            </div>
+                            <div class="fact-item">
+                                <span class="fact-number">100%</span>
+                                <span class="fact-label">New Materials</span>
+                            </div>
+                        </div>
+
+                        <p>The original builder had used complex compound angles and sophisticated joinery techniques that spoke to decades of experience. Every joint was thoughtfully designed for both strength and weather resistance. This wasn't just furniture – it was functional art.</p>
+                    </div>
+                    <div class="case-image">
+                        <img src="assets/images/projects/outdoor-chair-disassembled.jpg" alt="Disassembled chair parts revealing the master carpenter's joinery techniques - Ottawa Handiman" loading="lazy">
+                        <p class="image-caption">Disassembled parts revealing the complex angles and joinery</p>
+                    </div>
+                </div>
+
+                <!-- The Rebuilding Process -->
+                <div class="case-block process-block">
+                    <div class="case-content">
+                        <h3>The Rebuilding Process</h3>
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <span class="step-number">1</span>
+                                <h4>Documentation</h4>
+                                <p>Carefully disassembled and documented every angle, measurement, and joint of the original chairs</p>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">2</span>
+                                <h4>Material Selection</h4>
+                                <p>Sourced weather-resistant lumber suitable for another 30 years of outdoor use</p>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">3</span>
+                                <h4>Precision Cutting</h4>
+                                <p>Replicated every compound angle and complex joint from the master's original design</p>
+                            </div>
+                            <div class="process-step">
+                                <span class="step-number">4</span>
+                                <h4>Assembly & Finishing</h4>
+                                <p>Assembled with weather-resistant fasteners and applied protective finish for longevity</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-image">
+                        <img src="assets/images/projects/outdoor-chairs-new-construction.jpg" alt="Two new outdoor chairs under construction in Ottawa Handiman workshop" loading="lazy">
+                        <p class="image-caption">The new chairs taking shape in the workshop</p>
+                    </div>
+                </div>
+
+                <!-- The Result -->
+                <div class="case-block result-block">
+                    <div class="case-content">
+                        <h3>The Result</h3>
+                        <p>They were a lot of work, but worth it to the client. I can only hope that mine last as long as the originals did.</p>
+
+                        <div class="result-highlights">
+                            <div class="highlight">
+                                <span class="highlight-icon">✓</span>
+                                <p>Preserved the original master craftsman's design</p>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight-icon">✓</span>
+                                <p>Built to last another 30 years</p>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight-icon">✓</span>
+                                <p>Client kept his beloved furniture legacy alive</p>
+                            </div>
+                            <div class="highlight">
+                                <span class="highlight-icon">✓</span>
+                                <p>Honored the original builder's skill</p>
+                            </div>
+                        </div>
+
+                        <blockquote class="client-quote">
+                            "Sometimes when you have something that you love, you never want to let it go. Do you have a project like that? Let me know and we can talk about it."
+                        </blockquote>
+                        <p class="attribution">– Ottawa Handiman</p>
+                    </div>
+                    <div class="case-image">
+                        <img src="assets/images/projects/outdoor-chairs-completed-pair.jpg" alt="Newly rebuilt outdoor chairs by Ottawa Handiman - faithful recreation of 30-year-old design" loading="lazy">
+                        <p class="image-caption">The rebuilt chairs – ready for another generation of memories</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Case Study: The Bullroarer Project -->
+        <section class="case-study-section case-study-alt">
             <div class="container">
                 <div class="case-study-header">
                     <span class="case-label">Featured Project</span>
@@ -331,8 +530,8 @@
             </div>
         </section>
         
-        <!-- Second Case Study: Fence Toppers -->
-        <section class="case-study-section case-study-alt">
+        <!-- Third Case Study: Fence Toppers -->
+        <section class="case-study-section">
             <div class="container">
                 <div class="case-study-header">
                     <span class="case-label">Featured Project</span>
@@ -593,5 +792,57 @@
     
     <!-- Page-specific scripts -->
     <script src="assets/js/unusual-projects.js?t=ios-fix"></script>
+
+<!-- FOOTER_START -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Ottawa Handiman</h3>
+                <p>Professional woodworking and custom wood cutting services serving the entire Ottawa area from our Barrhaven workshop.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li>Custom Wood Cutting</li>
+                    <li>Small Carpentry Projects</li>
+                    <li>Wood Repairs</li>
+                    <li>DIY Project Support</li>
+                    <li>Precision Lumber Cutting</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Service Areas</h3>
+                <ul>
+                    <li>Ottawa & Area</li>
+                    <li>Barrhaven</li>
+                    <li>Nepean</li>
+                    <li>Kanata</li>
+                    <li>Orleans</li>
+                    <li>Manotick</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><a href="tel:3439870900">343.987.0900</a></p>
+                <p>📧 <a href="mailto:ottawahandiman3@gmail.com">ottawahandiman3@gmail.com</a></p>
+                <p>📍 Barrhaven, Ottawa, Ontario</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; <span class="current-year">2025</span> Ottawa Handiman. Serving Ottawa, Nepean, Kanata, Orleans, Barrhaven - All Ottawa communities welcome.</p>
+        </div>
+        
+        <div class="footer-credit">
+            <p>Website crafted & SEO-optimized by <a href="https://thechatbotgenius.com" target="_blank" rel="noopener">The Chatbot Genius</a> | AI-Powered Web Solutions That Dominate</p>
+        </div>
+    </div>
+</footer>
+<!-- FOOTER_END -->
+
 </body>
 </html>

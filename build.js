@@ -11,8 +11,12 @@
  * - node build.js --watch           # Watch for changes (future feature)
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configuration
 const CONFIG = {
@@ -317,4 +321,4 @@ if (args.length > 0) {
     build();
 }
 
-module.exports = { build, processHTMLFile, findHTMLFiles };
+export { build, processHTMLFile, findHTMLFiles };
