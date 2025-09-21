@@ -1,7 +1,7 @@
 // Ottawa Handiman Service Worker
-// Version 1.0.0
+// Version 1.1.0 - Fixed navigation to projects.html
 
-const CACHE_NAME = 'ottawa-handiman-v2';
+const CACHE_NAME = 'ottawa-handiman-v3';
 const urlsToCache = [
   '/',
   '/assets/css/style.css',
