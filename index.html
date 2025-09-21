@@ -25,15 +25,20 @@
     <!-- PWA Manifest -->
     <link rel="manifest" href="/manifest.json">
     
-    <!-- Google Analytics -->
-    <!-- Google tag (gtag.js) -->
+    <!-- Cookie Consent Manager - MUST load before GA -->
+    <script src="assets/js/cookie-consent.js"></script>
+
+    <!-- Google Analytics - controlled by cookie consent -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KNZ3Z35FV"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-2KNZ3Z35FV');
+      // Initial consent state - will be updated by cookie-consent.js
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied'
+      });
     </script>
     
     <!-- Open Graph Tags -->
@@ -944,6 +949,7 @@
         
         <div class="footer-bottom">
             <p>&copy; <span class="current-year">2025</span> Ottawa Handiman. Serving Ottawa, Nepean, Kanata, Orleans, Barrhaven - All Ottawa communities welcome.</p>
+            <p><a href="#" onclick="CookieConsent.showSettings(); return false;" style="color: #f5deb3; text-decoration: underline; font-size: 14px;">Cookie Preferences</a> | <a href="#" onclick="CookieConsent.reset(); return false;" style="color: #f5deb3; text-decoration: underline; font-size: 14px;">Reset Cookie Consent</a></p>
         </div>
         
         <div class="footer-credit">
