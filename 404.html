@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Moved - Ottawa Handiman</title>
+    <meta name="description" content="This page has moved. Redirecting to our projects showcase.">
+
+    <!-- Auto redirect after 3 seconds -->
+    <meta http-equiv="refresh" content="3;url=/projects.html">
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #2d5f3f 0%, #1a3625 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 60px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #f5deb3;
+        }
+
+        .message {
+            font-size: 20px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .redirect-info {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #f5deb3;
+            color: #2d5f3f;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid #f5deb3;
+        }
+
+        .button:hover {
+            background: transparent;
+            color: #f5deb3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(245, 222, 179, 0.3);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: #f5deb3;
+            border: 2px solid #f5deb3;
+        }
+
+        .button-secondary:hover {
+            background: #f5deb3;
+            color: #2d5f3f;
+        }
+
+        .countdown {
+            font-size: 36px;
+            color: #f5deb3;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            color: #f5deb3;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+
+            .button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Ottawa Handiman</div>
+
+        <h1>Page Moved!</h1>
+
+        <div class="message">
+            We've reorganized our site to serve you better.<br>
+            The page you're looking for has a new home.
+        </div>
+
+        <div class="redirect-info">
+            Redirecting to our Projects Showcase in...
+        </div>
+
+        <div class="countdown" id="countdown">3</div>
+
+        <div class="button-container">
+            <a href="/projects.html" class="button">Go to Projects Now</a>
+            <a href="/" class="button button-secondary">Return Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        let count = 3;
+        const countdownEl = document.getElementById('countdown');
+
+        const timer = setInterval(() => {
+            count--;
+            if (count > 0) {
+                countdownEl.textContent = count;
+            } else {
+                countdownEl.textContent = 'Redirecting...';
+                clearInterval(timer);
+                // Redirect happens via meta refresh tag
+            }
+        }, 1000);
+
+        // Check if coming from unusual-projects.html specifically
+        if (window.location.pathname.includes('unusual-projects')) {
+            // Already redirecting to projects.html via meta tag
+        }
+    </script>
+</body>
+</html>
