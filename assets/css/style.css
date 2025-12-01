@@ -279,6 +279,11 @@ p {
     align-items: center;
 }
 
+.hero-section main,
+.hero-section #main-content {
+    width: 100%;
+}
+
 .hero-content {
     display: grid;
     grid-template-columns: 1fr;
