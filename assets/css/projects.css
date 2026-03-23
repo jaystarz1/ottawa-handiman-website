@@ -556,6 +556,10 @@
         aspect-ratio: 16/9;
     }
     
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -644,6 +648,50 @@
 .philosophy-item:nth-child(2) { animation-delay: 0.2s; }
 .philosophy-item:nth-child(3) { animation-delay: 0.3s; }
 .philosophy-item:nth-child(4) { animation-delay: 0.4s; }
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.projects-faq {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.projects-faq h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.projects-faq .section-subtitle {
+    text-align: center;
+    color: var(--text-light, #7F8C8D);
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.faq-item {
+    background: var(--light-bg, #F8F9FA);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.faq-item p {
+    line-height: 1.7;
+    color: var(--text-dark, #2C3E50);
+}
 
 /* ============================================
    PRINT STYLES
