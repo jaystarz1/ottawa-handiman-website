@@ -4,7 +4,7 @@
   <!-- Homepage with images -->
   <url>
     <loc>https://ottawahandiman.ca/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -57,5 +57,20 @@
       <image:title>Professional Lumber Storage Workshop</image:title>
       <image:caption>Ottawa Handiman workshop lumber storage partnering with The Wood Source Manotick</image:caption>
     </image:image>
+  </url>
+  <!-- How We Work Together page -->
+  <url>
+    <loc>https://ottawahandiman.ca/how-we-work.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Projects page -->
+  <url>
+    <loc>https://ottawahandiman.ca/projects.html</loc>
+    <lastmod>2026-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
