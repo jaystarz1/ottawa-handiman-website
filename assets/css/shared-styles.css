@@ -138,6 +138,7 @@ html {
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 5px 10px;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover,
