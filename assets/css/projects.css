@@ -5,7 +5,7 @@
    HERO SECTION
    ============================================ */
 .unusual-hero {
-    background: linear-gradient(135deg, #2C5530 0%, #3a6b42 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3a6b42 100%);
     color: var(--white);
     padding: 100px 0 80px;
     text-align: center;
@@ -195,7 +195,7 @@
 }
 
 .physics-note {
-    background: linear-gradient(135deg, #E8F5E8 0%, #F0F8F0 100%);
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F0F8F0 100%);
     padding: 2rem;
     border-radius: 8px;
     margin-top: 2rem;
@@ -268,7 +268,7 @@
    ============================================ */
 .your-project-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #E8F5E8 0%, #F0F8F0 100%);
+    background: linear-gradient(135deg, var(--primary-light) 0%, #F0F8F0 100%);
     text-align: center;
     border-top: 1px solid var(--border-color);
 }
@@ -414,7 +414,7 @@
    CTA SECTION
    ============================================ */
 .unusual-cta {
-    background: linear-gradient(135deg, #2C5530 0%, #3a6b42 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #3a6b42 100%);
     color: var(--white);
     padding: 80px 0;
     text-align: center;
