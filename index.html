@@ -73,7 +73,7 @@
             "https://ottawahandiman.ca/assets/images/professional-handrail-posts-ottawa.jpg"
         ],
         "telephone": "+1-343-987-0900",
-        "email": "ottawahandiman3@gmail.com",
+        "email": "andregouellette@yahoo.com",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Barrhaven Area",
@@ -152,7 +152,15 @@
                 "name": "Do you take small woodworking jobs in Ottawa?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Absolutely! We specialize in small jobs that larger contractors won't take. $100 minimum covers most small cutting and repair projects."
+                    "text": "Yes — small jobs are our specialty. Larger contractors often pass on these projects, but no project is too small for our workshop."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you give quotes over email or phone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Andre prefers to discuss your project by phone before quoting. Our rate is $75 per hour with a $75 minimum. Because projects vary in complexity, a quick conversation lets us give you a fair, accurate price. Call or text 343.987.0900."
                 }
             },
             {
@@ -221,11 +229,9 @@
             <span></span>
         </button>
         <ul class="nav-menu">
-            <li><a href="/" data-nav="home">Home</a></li>
+            <li><a href="/" data-nav="home" class="active">Home</a></li>
             <li><a href="/#services" data-nav="services">Services</a></li>
             <li><a href="/#about" data-nav="about">About</a></li>
-            <li><a href="/#gallery" data-nav="gallery">Gallery</a></li>
-            <li><a href="/#process" data-nav="process">Process</a></li>
             <li><a href="/how-we-work.html" data-nav="how-we-work">How We Work</a></li>
             <li><a href="/projects.html" data-nav="projects">Projects</a></li>
             <li><a href="/#faq" data-nav="faq">FAQ</a></li>
@@ -281,83 +287,7 @@
     </div>
 </div>
 <!-- NAVIGATION_END -->
-    
-    <!-- Navigation Menu -->
-    <nav class="navigation" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home" aria-label="Ottawa Handiman Home">
-                    <strong>Ottawa Handiman</strong>
-                    <span class="nav-tagline">Professional Woodworking</span>
-                </a>
-            </div>
-            <input type="checkbox" id="nav-check" class="nav-check">
-            <label for="nav-check" class="nav-toggle" aria-label="Toggle navigation menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="/how-we-work.html">How We Work</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="nav-cta"><a href="tel:3439870900" class="nav-phone">343.987.0900</a></li>
-            </ul>
-        </div>
-    </nav>
-    
-    <!-- Share Button -->
-    <button class="share-button" id="share" aria-label="Share this page">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="18" cy="5" r="3"></circle>
-            <circle cx="6" cy="12" r="3"></circle>
-            <circle cx="18" cy="19" r="3"></circle>
-            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-        </svg>
-        <span>Share</span>
-    </button>
 
-    <!-- Share Menu Popup -->
-    <div id="share-menu-inline" style="
-        position: fixed;
-        background: white;
-        border: 2px solid #2d5f3f;
-        border-radius: 8px;
-        padding: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        z-index: 999999;
-        display: none;
-        min-width: 200px;
-        top: 80px;
-        right: 20px;
-    ">
-        <div class="share-option" onclick="shareToFacebook()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
-            <span style="font-size: 18px;">📘</span> Facebook
-        </div>
-        <div class="share-option" onclick="shareToLinkedIn()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
-            <span style="font-size: 18px;">🔗</span> LinkedIn
-        </div>
-        <div class="share-option" onclick="shareToNextdoor()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
-            <span style="font-size: 18px;">🏘️</span> Nextdoor
-        </div>
-        <div class="share-option" onclick="shareToEmail()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
-            <span style="font-size: 18px;">✉️</span> Email
-        </div>
-        <div class="share-option" onclick="shareCopyLink()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
-            <span style="font-size: 18px;">📋</span> Copy Link
-        </div>
-        <div class="share-option" onclick="sharePrint()" style="padding: 12px; cursor: pointer; border-radius: 4px; color: #333; display: flex; align-items: center; gap: 10px; transition: background 0.2s;">
-            <span style="font-size: 18px;">🖨️</span> Print
-        </div>
-    </div>
-    
     <!-- Hero Section -->
     <header class="hero-section" id="home">
         <main id="main-content">
@@ -372,7 +302,7 @@
                 </div>
                 <div class="hero-cta">
                     <a href="tel:3439870900" class="cta-button primary">343.987.0900</a>
-                    <a href="mailto:ottawahandiman3@gmail.com" class="cta-button secondary">Email for Details</a>
+                    <a href="mailto:andregouellette@yahoo.com" class="cta-button secondary">Email for Details</a>
                 </div>
                 <div class="trust-badges">
                     <span class="badge">30+ Years Experience</span>
@@ -809,9 +739,14 @@
                 
                 <div class="faq-item">
                     <h3>Do you take small woodworking jobs in Ottawa?</h3>
-                    <p>Absolutely! We specialize in small jobs that larger contractors won't take. Our $100 minimum covers most small cutting and repair projects. No project is too small for our workshop.</p>
+                    <p>Absolutely — small jobs are our specialty. Larger contractors often pass on these projects, but for us they're the bread and butter. No project is too small for our workshop.</p>
                 </div>
-                
+
+                <div class="faq-item">
+                    <h3>Do you give quotes over email or phone?</h3>
+                    <p>Andre prefers to talk through your project before quoting. Our rate is $75 per hour with a $75 minimum. Most jobs are straightforward, but some are unusual or have hidden complexity that only surfaces in conversation — and Andre doesn't want to overcharge you or undercharge himself. A quick phone call lets him scope the work properly and give you a fair, accurate price. Call or text <a href="tel:3439870900" style="color: #2d5f3f; font-weight: 600;">343.987.0900</a> to get started.</p>
+                </div>
+
                 <div class="faq-item">
                     <h3>Can you help with my DIY project materials?</h3>
                     <p>Yes! Bring your lumber (from The WoodSource or anywhere else) and your plans - we'll handle the precision cutting and assembly. Save money on tools you'll rarely use.</p>
@@ -856,12 +791,12 @@
                     <div class="contact-item">
                         <h3>📞 Phone & Text</h3>
                         <p><a href="tel:3439870900" class="contact-link">343.987.0900</a></p>
-                        <p>Call or text for quick project discussion</p>
+                        <p>Call or text — Andre will discuss your project scope before quoting</p>
                     </div>
                     
                     <div class="contact-item">
                         <h3>📧 Email</h3>
-                        <p><a href="mailto:ottawahandiman3@gmail.com" class="contact-link">ottawahandiman3@gmail.com</a></p>
+                        <p><a href="mailto:andregouellette@yahoo.com" class="contact-link">andregouellette@yahoo.com</a></p>
                         <p>Send project details and photos</p>
                     </div>
                     
@@ -879,7 +814,8 @@
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Quick Project Quote</h3>
+                    <h3>Tell Us About Your Project</h3>
+                    <p style="margin: 0 0 18px; color: #555; font-size: 0.95rem; line-height: 1.5;">We don't quote sight-unseen. Send us your project details and Andre will call you to talk through the scope — that way the price reflects the actual work, not a guess.</p>
                     <form id="contact-form">
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="tel" name="phone" placeholder="Phone Number" required>
@@ -893,7 +829,7 @@
                             <option value="other">Other</option>
                         </select>
                         <textarea name="project" placeholder="Describe your project..." rows="4" required></textarea>
-                        <button type="submit" class="submit-button">Get Your Quote</button>
+                        <button type="submit" class="submit-button">Send Project Details</button>
                     </form>
                 </div>
             </div>
@@ -910,56 +846,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ottawa Handiman</h3>
-                    <p>Professional woodworking and custom wood cutting services serving the entire Ottawa area from our Barrhaven workshop.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li>Custom Wood Cutting</li>
-                        <li>Small Carpentry Projects</li>
-                        <li>Wood Repairs</li>
-                        <li>DIY Project Support</li>
-                        <li>Precision Lumber Cutting</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Service Areas</h3>
-                    <ul>
-                        <li>Ottawa & Area</li>
-                        <li>Barrhaven</li>
-                        <li>Nepean</li>
-                        <li>Kanata</li>
-                        <li>Orleans</li>
-                        <li>Manotick</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p><a href="tel:3439870900">343.987.0900</a></p>
-                    <p>📧 <a href="mailto:ottawahandiman3@gmail.com">ottawahandiman3@gmail.com</a></p>
-                    <p>📍 Barrhaven, Ottawa, Ontario</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2025 Ottawa Handiman. Serving Ottawa, Nepean, Kanata, Orleans, Barrhaven - All Ottawa communities welcome.</p>
-            </div>
-            
-            <div class="footer-credit">
-                <p>Website crafted & SEO-optimized by <a href="https://thechatbotgenius.com" target="_blank" rel="noopener">The Chatbot Genius</a> | AI-Powered Web Solutions That Dominate</p>
-            </div>
-        </div>
-    </footer>
 
     <script src="assets/js/script.js?v=1758469908"></script>
 
@@ -998,7 +884,7 @@
             <div class="footer-section">
                 <h3>Contact</h3>
                 <p><a href="tel:3439870900">343.987.0900</a></p>
-                <p>📧 <a href="mailto:ottawahandiman3@gmail.com">ottawahandiman3@gmail.com</a></p>
+                <p>📧 <a href="mailto:andregouellette@yahoo.com">andregouellette@yahoo.com</a></p>
                 <p>📍 Barrhaven, Ottawa, Ontario</p>
             </div>
         </div>

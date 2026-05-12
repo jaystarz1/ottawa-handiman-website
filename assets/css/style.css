@@ -75,6 +75,7 @@ body {
     display: flex;
     flex-direction: column;
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 .nav-tagline {
@@ -111,7 +112,7 @@ body {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .nav-menu a {
@@ -119,7 +120,8 @@ body {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
-    padding: 5px 10px;
+    padding: 5px 8px;
+    white-space: nowrap;
 }
 
 .nav-menu a:hover {
