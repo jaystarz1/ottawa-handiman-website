@@ -139,6 +139,22 @@
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* Tall phone-photo safety net for the balcony case study.
+   On desktop, cap tall portrait images so they don't blow past one screen.
+   Mobile (≤768px) keeps the default full-width behaviour. */
+@media (min-width: 769px) {
+    #balcony-improvement .case-image {
+        text-align: center;
+    }
+    #balcony-improvement .case-image img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 560px;
+        display: inline-block;
+    }
+}
+
 .image-caption {
     text-align: center;
     font-size: 0.9rem;
