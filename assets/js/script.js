@@ -509,8 +509,8 @@ Sent from ottawahandiman.ca contact form
     });
     
     // Track outbound links
-    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href*="ottawahandiman.ca"])');
-    externalLinks.forEach(link => {
+    const outboundLinks = document.querySelectorAll('a[href^="http"]:not([href*="ottawahandiman.ca"])');
+    outboundLinks.forEach(link => {
         link.addEventListener('click', function() {
             const url = this.href;
             if (typeof gtag !== 'undefined') {
