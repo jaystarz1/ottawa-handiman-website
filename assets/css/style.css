@@ -608,6 +608,13 @@ p {
     box-shadow: var(--shadow-hover);
 }
 
+a.gallery-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+
 .gallery-item img {
     width: 100%;
     height: 250px;
